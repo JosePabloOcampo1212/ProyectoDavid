@@ -1,6 +1,7 @@
 // DavPro.cpp : Este archivo contiene la función "main". La ejecución del programa comienza y termina ahí.
 //
 
+
 #include <iostream>
 #include <string>
 #include <sstream>
@@ -243,7 +244,7 @@ void interfazDeUsuario() {
     int existencia;
     int existenciaMin;
     int eliminarCod;
-    Producto p1;
+    Tienda t1 = Tienda();
 
     do {
         system("cls");
@@ -282,55 +283,54 @@ void interfazDeUsuario() {
             cin >> existencia;
             cout << "Existecnia mínima: ";
             cin >> existenciaMin;
-            p1 = Producto(codigo, nombre, precioBase, porcentajeGanancia, pesoUnitario, cantVendida, existencia, existenciaMin);
-            ingresaProducto(p1);
+            t1.ingresaProducto(Producto(codigo, nombre, precioBase, porcentajeGanancia, pesoUnitario, cantVendida, existencia, existenciaMin));
             system("pause>nul"); // Pausa
             break;
 
         case 2:
             cout << "Ingrese el código del producto que desea eliminar: ";
             cin >> eliminarCod;
-            eliminarProductoPorSu(eliminarCod);
+            t1.eliminarProductoPorSu(eliminarCod);
             system("pause>nul"); // Pausa
             break;
 
         case 3:
-            cout << "Producto de mayor valor: " << obtenerProductoDeMayorValor().getNombre();
+            cout << "Producto de mayor valor: " << t1.obtenerProductoDeMayorValor().getNombre();
             system("pause>nul"); // Pausa            
             break;
 
         case 4:
-            cout << "Producto con mayor existencia: " << obtenerProductoConMayorExistencia().getNombre();
+            cout << "Producto con mayor existencia: " << t1.obtenerProductoConMayorExistencia().getNombre();
             system("pause>nul"); // Pausa                
             break;
 
         case 5:
-            ordenarPorductoPorCodigo();
+            t1.ordenarPorductoPorCodigo();
             cout << "Se han ordenado los productos por código de forma ascendente, exitosamente.";
             system("pause>nul"); // Pausa                
             break;
 
         case 6:
-            imprimirTodosLosProductos();
+            t1.imprimirTodosLosProductos();
             system("pause>nul"); // Pausa                
             break;
 
         case 7:
-            cout << "Cantidad de productos bajos de existencia: " << cantDeProductosBajosDeExistencia();
+            cout << "Cantidad de productos bajos de existencia: " << t1.cantDeProductosBajosDeExistencia();
             system("pause>nul"); // Pausa                
             break;
 
         case 8:
-            imprimirProductosBajosDeExistencia();
+            t1.imprimirProductosBajosDeExistencia();
             system("pause>nul"); // Pausa                
             break;
 
         case 9:
-            cout << "Total de kilogramos de todos los productos vendidos: " << cuantosKgsSeHanVendidoEnGeneral();
+            cout << "Total de kilogramos de todos los productos vendidos: " << t1.cuantosKgsSeHanVendidoEnGeneral();
             system("pause>nul"); // Pausa                
             break;
 
-        case 0:
+        case 20:
             repetir = false;
             break;
         }
@@ -338,12 +338,11 @@ void interfazDeUsuario() {
 
 }
 
-};
+
 
 int main() {
 
-    SuperContenedorV A; //crea una coleccion
-    A.interfazDeUsuario();
+    interfazDeUsuario();
 
     return 0;
 }
