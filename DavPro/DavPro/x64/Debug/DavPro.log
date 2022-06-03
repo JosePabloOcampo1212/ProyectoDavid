@@ -1,0 +1,6 @@
+﻿  DavPro.cpp
+C:\Users\josep\OneDrive\Desktop\Proyecto_David\DavPro\DavPro\DavPro.cpp(89,25): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\josep\OneDrive\Desktop\Proyecto_David\DavPro\DavPro\DavPro.cpp(236,55): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\josep\OneDrive\Desktop\Proyecto_David\DavPro\DavPro\DavPro.cpp(237,61): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\josep\OneDrive\Desktop\Proyecto_David\DavPro\DavPro\DavPro.cpp(238,61): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+  DavPro.vcxproj -> C:\Users\josep\OneDrive\Desktop\Proyecto_David\DavPro\x64\Debug\DavPro.exe
