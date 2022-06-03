@@ -1,6 +1,17 @@
 ﻿  DavPro.cpp
-C:\Users\josep\OneDrive\Desktop\Proyecto_David\DavPro\DavPro\DavPro.cpp(89,25): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\josep\OneDrive\Desktop\Proyecto_David\DavPro\DavPro\DavPro.cpp(236,55): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\josep\OneDrive\Desktop\Proyecto_David\DavPro\DavPro\DavPro.cpp(237,61): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-C:\Users\josep\OneDrive\Desktop\Proyecto_David\DavPro\DavPro\DavPro.cpp(238,61): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-  DavPro.vcxproj -> C:\Users\josep\OneDrive\Desktop\Proyecto_David\DavPro\x64\Debug\DavPro.exe
+C:\Users\josed\Desktop\Proyecto 2\ProyectoDavid\DavPro\DavPro\DavPro.cpp(89,25): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\josed\Desktop\Proyecto 2\ProyectoDavid\DavPro\DavPro\DavPro.cpp(286,13): error C3861: 'ingresaProducto': no se encontró el identificador
+C:\Users\josed\Desktop\Proyecto 2\ProyectoDavid\DavPro\DavPro\DavPro.cpp(293,13): error C3861: 'eliminarProductoPorSu': no se encontró el identificador
+C:\Users\josed\Desktop\Proyecto 2\ProyectoDavid\DavPro\DavPro\DavPro.cpp(298,52): error C3861: 'obtenerProductoDeMayorValor': no se encontró el identificador
+C:\Users\josed\Desktop\Proyecto 2\ProyectoDavid\DavPro\DavPro\DavPro.cpp(303,58): error C3861: 'obtenerProductoConMayorExistencia': no se encontró el identificador
+C:\Users\josed\Desktop\Proyecto 2\ProyectoDavid\DavPro\DavPro\DavPro.cpp(308,13): error C3861: 'ordenarPorductoPorCodigo': no se encontró el identificador
+C:\Users\josed\Desktop\Proyecto 2\ProyectoDavid\DavPro\DavPro\DavPro.cpp(314,13): error C3861: 'imprimirTodosLosProductos': no se encontró el identificador
+C:\Users\josed\Desktop\Proyecto 2\ProyectoDavid\DavPro\DavPro\DavPro.cpp(319,70): error C3861: 'cantDeProductosBajosDeExistencia': no se encontró el identificador
+C:\Users\josed\Desktop\Proyecto 2\ProyectoDavid\DavPro\DavPro\DavPro.cpp(324,13): error C3861: 'imprimirProductosBajosDeExistencia': no se encontró el identificador
+C:\Users\josed\Desktop\Proyecto 2\ProyectoDavid\DavPro\DavPro\DavPro.cpp(329,80): error C3861: 'cuantosKgsSeHanVendidoEnGeneral': no se encontró el identificador
+C:\Users\josed\Desktop\Proyecto 2\ProyectoDavid\DavPro\DavPro\DavPro.cpp(341,1): error C2059: error de sintaxis: '}'
+C:\Users\josed\Desktop\Proyecto 2\ProyectoDavid\DavPro\DavPro\DavPro.cpp(341,1): error C2143: error de sintaxis: falta ';' delante de '}'
+C:\Users\josed\Desktop\Proyecto 2\ProyectoDavid\DavPro\DavPro\DavPro.cpp(345,5): error C2065: 'SuperContenedorV': identificador no declarado
+C:\Users\josed\Desktop\Proyecto 2\ProyectoDavid\DavPro\DavPro\DavPro.cpp(345,22): error C2146: error de sintaxis: falta ';' delante del identificador 'A'
+C:\Users\josed\Desktop\Proyecto 2\ProyectoDavid\DavPro\DavPro\DavPro.cpp(345,22): error C2065: 'A': identificador no declarado
+C:\Users\josed\Desktop\Proyecto 2\ProyectoDavid\DavPro\DavPro\DavPro.cpp(346,5): error C2065: 'A': identificador no declarado

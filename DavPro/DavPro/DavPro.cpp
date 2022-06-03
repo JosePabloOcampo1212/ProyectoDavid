@@ -210,7 +210,7 @@ public:
                 cout << "Código: " << vec[i].getCodigo() << endl;
                 cout << "Nombre: " << vec[i].getNombre() << endl;
                 cout << "Existencia: " << vec[i].getExistencia() << endl;
-                cout << "Existencia mínima: " << vec[i].getExistenciaMin() << endl;
+                cout << "Existencia minima: " << vec[i].getExistenciaMin() << endl;
             }
         }
         cout << "------------------------------------" << endl;
@@ -230,32 +230,121 @@ public:
 
 };
 
+void interfazDeUsuario() {
+
+    int opcion;
+    bool repetir = true;
+    string nombre;
+    int codigo;
+    float precioBase;
+    float porcentajeGanancia;
+    float pesoUnitario;
+    int cantVendida;
+    int existencia;
+    int existenciaMin;
+    int eliminarCod;
+    Producto p1;
+
+    do {
+        system("cls");
+
+        cout << "--------------------------------------------MENU-------------------------------------" << endl;
+        cout << "1. Ingresar un producto." << endl;
+        cout << "2. Eliminar un producto." << endl;
+        cout << "3. Desplegar el producto de mayor precio." << endl;
+        cout << "4. Desplegar el producto con mayor existencia." << endl;
+        cout << "5. Ordenar los productos por código." << endl;
+        cout << "6. Desplegar todos los productos." << endl;
+        cout << "7. Desplegar la cantidad de productos bajos de existencia." << endl;
+        cout << "8. Desplegar los productos bajos de existencia." << endl;
+        cout << "9. Desplegar el total de kilogramos de todos los productos vendidos." << endl;
+        cout << "10. Desplegar el total de Kilogramos vendidos de un producto." << endl;
+        cout << "20. SALIR" << endl;
+
+        cout << "\nIngrese una opcion: ";
+        cin >> opcion;
+
+        switch (opcion) {
+        case 1:
+            cout << "Digite código del producto: ";
+            cin >> codigo;
+            cout << "Nombre del producto: ";
+            cin >> nombre;
+            cout << "Precio base en colones: ";
+            cin >> precioBase;
+            cout << "Porcentaje de ganancia: ";
+            cin >> porcentajeGanancia;
+            cout << "Peso unitario en kilogramos: ";
+            cin >> pesoUnitario;
+            cout << "Cantidad vendida: ";
+            cin >> cantVendida;
+            cout << "Existecnia: ";
+            cin >> existencia;
+            cout << "Existecnia mínima: ";
+            cin >> existenciaMin;
+            p1 = Producto(codigo, nombre, precioBase, porcentajeGanancia, pesoUnitario, cantVendida, existencia, existenciaMin);
+            ingresaProducto(p1);
+            system("pause>nul"); // Pausa
+            break;
+
+        case 2:
+            cout << "Ingrese el código del producto que desea eliminar: ";
+            cin >> eliminarCod;
+            eliminarProductoPorSu(eliminarCod);
+            system("pause>nul"); // Pausa
+            break;
+
+        case 3:
+            cout << "Producto de mayor valor: " << obtenerProductoDeMayorValor().getNombre();
+            system("pause>nul"); // Pausa            
+            break;
+
+        case 4:
+            cout << "Producto con mayor existencia: " << obtenerProductoConMayorExistencia().getNombre();
+            system("pause>nul"); // Pausa                
+            break;
+
+        case 5:
+            ordenarPorductoPorCodigo();
+            cout << "Se han ordenado los productos por código de forma ascendente, exitosamente.";
+            system("pause>nul"); // Pausa                
+            break;
+
+        case 6:
+            imprimirTodosLosProductos();
+            system("pause>nul"); // Pausa                
+            break;
+
+        case 7:
+            cout << "Cantidad de productos bajos de existencia: " << cantDeProductosBajosDeExistencia();
+            system("pause>nul"); // Pausa                
+            break;
+
+        case 8:
+            imprimirProductosBajosDeExistencia();
+            system("pause>nul"); // Pausa                
+            break;
+
+        case 9:
+            cout << "Total de kilogramos de todos los productos vendidos: " << cuantosKgsSeHanVendidoEnGeneral();
+            system("pause>nul"); // Pausa                
+            break;
+
+        case 0:
+            repetir = false;
+            break;
+        }
+    } while (repetir);
+
+}
+
+};
+
 int main() {
 
-    Producto p1; //crea producto sin parámetros
-    Producto p2(10003, "Uvas", 200, 0.05, 1, 30, 3, 10); //con parámetros
-    Producto p3(10001, "Jabón", 400, 0.15, 1, 30, 200, 10);
-    Producto p4(10002, "Paño", 1500, 0.05, 1, 30, 420, 15);
-
-    Tienda coleccionproducto; //crea una coleccion
-    coleccionproducto.ingresaProducto(p1); //agrega el productos
-    coleccionproducto.ingresaProducto(p2);
-    coleccionproducto.ingresaProducto(p3);
-    coleccionproducto.ingresaProducto(p4);
-    coleccionproducto.imprimirTodosLosProductos(); //muestra posicion de producto  en el vector + atributos del mismo
-
-    coleccionproducto.eliminarProductoPorSu(00000);
-    coleccionproducto.imprimirTodosLosProductos();
-
-    cout << "Producto de mayor valor: " << coleccionproducto.obtenerProductoDeMayorValor().getNombre() << endl;
-    cout << "Producto con mayor existencia: " << coleccionproducto.obtenerProductoConMayorExistencia().getNombre() << endl;
-    cout << "Kilogramos vendidos en general de todos los productos: " << coleccionproducto.cuantosKgsSeHanVendidoEnGeneral() << "kg" << endl;
-    cout << "Cantidad de productos bajos de existencia: " << coleccionproducto.cantDeProductosBajosDeExistencia() << endl;
-
-    coleccionproducto.imprimirProductosBajosDeExistencia();
-
-    coleccionproducto.ordenarPorductoPorCodigo();
-    coleccionproducto.imprimirTodosLosProductos();
+    SuperContenedorV A; //crea una coleccion
+    A.interfazDeUsuario();
 
     return 0;
 }
+
